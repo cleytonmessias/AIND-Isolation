@@ -1,0 +1,914 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pla",
+				"player1"
+			],
+			[
+				"to",
+				"to_string\tfunction"
+			],
+			[
+				"store",
+				"store_platform_association"
+			],
+			[
+				"vtex",
+				"vtexcommercestable"
+			],
+			[
+				"day",
+				"days_behind"
+			],
+			[
+				"create",
+				"created_at"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"deli",
+				"delivery_date"
+			],
+			[
+				"last",
+				"last_opinion"
+			],
+			[
+				"gs",
+				"gsub"
+			],
+			[
+				"remove",
+				"removeWords"
+			],
+			[
+				"from",
+				"from_data"
+			],
+			[
+				"parse",
+				"parseOutText"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "game_agent.py",
+			"settings":
+			{
+				"buffer_size": 7929,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tournament.py",
+			"settings":
+			{
+				"buffer_size": 7081,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sample_players.py",
+			"settings":
+			{
+				"buffer_size": 8690,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "isolation/isolation.py",
+			"settings":
+			{
+				"buffer_size": 11339,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "agent_test.py",
+			"settings":
+			{
+				"buffer_size": 22201,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Anaconda Python Builder",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Anaconda: Set Python interpreter"
+			],
+			[
+				"anaconda",
+				"Anaconda: Set Python interpreter"
+			],
+			[
+				"dif",
+				"Git: Diff Current File"
+			],
+			[
+				"priva",
+				"Gist: Create Private Gist"
+			],
+			[
+				"rails",
+				"Set Syntax: Ruby on Rails"
+			],
+			[
+				"private",
+				"Gist: Create Private Gist"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"mar",
+				"Set Syntax: Markdown"
+			],
+			[
+				"rail",
+				"Set Syntax: Ruby on Rails"
+			],
+			[
+				"ma",
+				"Set Syntax: Markdown"
+			],
+			[
+				"pri",
+				"Gist: Create Private Gist"
+			],
+			[
+				"jav",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"raul",
+				"Set Syntax: Ruby on Rails"
+			],
+			[
+				"rai",
+				"Set Syntax: Ruby on Rails"
+			],
+			[
+				"h",
+				"Set Syntax: HTML"
+			],
+			[
+				"pr",
+				"Gist: Create Private Gist"
+			],
+			[
+				"rauls",
+				"Set Syntax: Ruby on Rails"
+			],
+			[
+				"priv",
+				"Gist: Create Private Gist"
+			],
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"py",
+				"Set Syntax: Python"
+			],
+			[
+				"tml",
+				"Set Syntax: HTML"
+			],
+			[
+				"bas",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"prvia",
+				"Gist: Create Private Gist"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"ra",
+				"Set Syntax: Ruby on Rails"
+			],
+			[
+				"text",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation",
+		"/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/isolation"
+	],
+	"file_history":
+	[
+		"/Users/cleytonmessias/Library/Application Support/Sublime Text 3/Packages/User/JSON.sublime-settings",
+		"/Users/cleytonmessias/Library/Application Support/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/Users/cleytonmessias/Library/Application Support/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
+		"/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/isolation/isolation.py",
+		"/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/agent_test.py",
+		"/Users/cleytonmessias/Dropbox/Education/AIND/projects/environment.yaml",
+		"/Users/cleytonmessias/trustvox_project/scripts/AddStoreVtex/Dondocas.rb",
+		"/Users/cleytonmessias/trustvox_project/scripts/AddStoreVtex/QDB_Eudora_Novo.rb",
+		"/Users/cleytonmessias/Downloads/nubank-2017-01.ofx",
+		"/Users/cleytonmessias/trustvox_project/scripts/AddStoreVtex/Allure_AltaMesa.rb",
+		"/Users/cleytonmessias/trustvox_project/scripts/Fix_URLS_LojasPompeia.rb",
+		"/Users/cleytonmessias/trustvox_project/trustvox/config/environments/production.rb",
+		"/Users/cleytonmessias/trustvox_project/scripts/AddStoreVtex/Flow.rb",
+		"/Users/cleytonmessias/trustvox_project/scripts/Trustvox_RX_Baby.rb",
+		"/Users/cleytonmessias/trustvox_project/scripts/AddStoreVtex/NossosBichos.rb",
+		"/Users/cleytonmessias/trustvox_project/trustvox/app/jobs/import_sales_vtex_job.rb",
+		"/Users/cleytonmessias/trustvox_project/trustvox/app/jobs/import_vtex_store_sales_job.rb",
+		"/Users/cleytonmessias/trustvox_project/trustvox/app/services/vtex/sales_service.rb",
+		"/Users/cleytonmessias/trustvox_project/trustvox/app/models/sale.rb",
+		"/Users/cleytonmessias/trustvox_project/trustvox/app/services/vtex/sales_grabber.rb",
+		"/Users/cleytonmessias/trustvox_project/trustvox/lib/vtex/sales_integration.rb",
+		"/Users/cleytonmessias/trustvox_project/trustvox/lib/vtex/client_integration.rb",
+		"/Users/cleytonmessias/trustvox_project/scripts/AddStoreVtex/Heckel.rb",
+		"/Users/cleytonmessias/.bash_profile",
+		"/Users/cleytonmessias/trustvox_project/scripts/AddStoreVtex/Baher.rb",
+		"/Users/cleytonmessias/trustvox_project/trustvox/app/models/product.rb",
+		"/Users/cleytonmessias/trustvox_project/trustvox/app/models/partner.rb",
+		"/Users/cleytonmessias/trustvox_project/Financeiro.rb",
+		"/Users/cleytonmessias/trustvox_project/scripts/AddStoreVtex/delonghi.rb",
+		"/Users/cleytonmessias/Desktop/Tarefas para Ley",
+		"/Users/cleytonmessias/trustvox_project/scripts/AddStoreVtex/CasasBaher.rb",
+		"/etc/hosts",
+		"/Users/cleytonmessias/trustvox_project/scripts/AddStoreVtex/Brastemp e Consul.rb",
+		"/Users/cleytonmessias/.ssh/known_hosts",
+		"/Users/cleytonmessias/trustvox_project/scripts/AddStoreVtex/QuemDisseBerenice_Eudora_TBB.rb",
+		"/Users/cleytonmessias/trustvox_project/scripts/CompraCerta_RelatorioPerformance.rxml",
+		"/Users/cleytonmessias/trustvox_project/scripts/AddStoreVtex/Old/TimeCenter_add_dev.rb",
+		"/Users/cleytonmessias/trustvox_project/trustvox/app/controllers/notifications/authorizations_controller.rb",
+		"/Users/cleytonmessias/trustvox_project/scripts/fix_dermaCosmeticos.rb",
+		"/Users/cleytonmessias/trustvox_project/trustvox/app/views/opinions/_opinion.html.erb",
+		"/Users/cleytonmessias/trustvox_project/scripts/AddStoreVtex/NerdStore.rb",
+		"/Users/cleytonmessias/trustvox_project/scripts/AddStoreVtex/CompraCerta.rb",
+		"/Users/cleytonmessias/trustvox_project/trustvox/app/models/store.rb",
+		"/Users/cleytonmessias/trustvox_project/scripts/AddStoreVtex/CompreDeBoa.rb",
+		"/Users/cleytonmessias/trustvox_project/trustvox/app/queries/last_month_sale_query.rb",
+		"/Users/cleytonmessias/trustvox_project/trustvox/app/services/intercom/metrics.rb",
+		"/Users/cleytonmessias/trustvox_project/trustvox/app/queries/today_sale_mails_query.rb",
+		"/Users/cleytonmessias/trustvox_project/scripts/Trocar_Opiniao_produto.rb",
+		"/Users/cleytonmessias/trustvox_project/trustvox/config/blacklist.yml",
+		"/Users/cleytonmessias/trustvox_project/intercom-ruby/,",
+		"/Users/cleytonmessias/trustvox_project/trustvox/app/services/ciashop/extract_delivery_date.rb",
+		"/Users/cleytonmessias/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"python",
+			"score",
+			"apply_move",
+			"timeout",
+			"to_string",
+			"print_board",
+			"GreedyPlayer",
+			"ID_Improved",
+			"main",
+			"initAUT",
+			"makeEvalTable",
+			"__player_2__",
+			"score",
+			"minimax",
+			"551",
+			"ciashop",
+			"71654",
+			"551",
+			"cache",
+			"8056",
+			"scheluded",
+			"drogaraia",
+			"9938",
+			"71654",
+			"3284",
+			"reidasjoias",
+			"like",
+			"drogaraia",
+			"isadora@geteloquent.com",
+			"drogaraia",
+			"preferences",
+			"dondocaslingerie",
+			">",
+			",",
+			" [2017, 2, 12]",
+			"created_at",
+			"drogasil",
+			"drogaraia",
+			"preferences",
+			"altamesa",
+			"665",
+			"nil",
+			"unless",
+			"ree",
+			" ",
+			"vtexcommercestable",
+			"71735",
+			"review",
+			"665",
+			"preferences",
+			"5004",
+			"today",
+			"71735",
+			"71702",
+			"71216",
+			"7133",
+			" ",
+			"\nTodaySaleMailsQuery.()",
+			"[2016, 11]",
+			"7139",
+			"71702",
+			"71216",
+			"71702",
+			"_productGroup",
+			"send_sale",
+			"store_commen",
+			"like",
+			"4a413f18-b421-4de2-9c41-51ed37562a7e",
+			"email",
+			"TodaySaleMailsQuery",
+			"send_sa",
+			"1756",
+			"8034",
+			"665",
+			"today",
+			"prefere",
+			"preferences",
+			"send_",
+			"altamesa",
+			"today",
+			"preferences",
+			"days_be",
+			"sales_channel",
+			"preferen",
+			"TodaySaleMailsQuery",
+			"wt_sale_answer",
+			"Store.find(",
+			" ",
+			"R$",
+			"-",
+			"R$-",
+			"@",
+			"send",
+			". ",
+			", ",
+			"interval",
+			"dos produtos",
+			"http://www.cirilocabos.com.br/cabo-microfone-estereo-blindagem-espiral-2x0-14-mm-por-metro/p",
+			"Cabo-Microfone-Linha-Profissional-2x030mm%C2%B2---Cirilo-Cabos-7221/p",
+			"665",
+			"DARF IR",
+			"ISS",
+			"<span class=cliente><i class=\"fa fa-user text-regular\"></i> <span class=id>185</span> - <a href=",
+			"139",
+			"665",
+			"preferences",
+			"ImportVtexStoreSalesJob",
+			"o trustvox",
+			"import",
+			"(",
+			"655",
+			"preferen",
+			";",
+			"preferences",
+			"qbbr",
+			"388",
+			"30054",
+			"70162",
+			"30085",
+			"import",
+			"send_sa",
+			"wt_sale_answer",
+			"f_status",
+			"8056",
+			"TodaySaleMailsQuery",
+			"today",
+			"TodaySaleMailsQuery",
+			"Agora vamos interpretar esses dados para gerem informações relevantes? Fizemos um artigo apenas sobre isso"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "game_agent.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7929,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2889,
+								2889
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1368.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "tournament.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7081,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6280,
+								6280
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2300.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sample_players.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8690,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3036,
+								3036
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1531.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "isolation/isolation.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11339,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5350,
+								5350
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2785.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "agent_test.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 22201,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11043,
+								11043
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6142.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 496.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Anaconda Python Builder",
+	"project": "AIND-Isolation.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"is",
+				"isolation/isolation.py"
+			],
+			[
+				"ever",
+				"~/trustvox_project/scripts/everyday_scripts.rb"
+			],
+			[
+				"trocar",
+				"~/trustvox_project/scripts/Trocar_Opiniao_produto.rb"
+			],
+			[
+				"sale.r",
+				"app/models/sale.rb"
+			],
+			[
+				"boa",
+				"~/trustvox_project/scripts/AddStoreVtex/BoaSaudeSuplementos.rb"
+			],
+			[
+				"boasa",
+				"~/trustvox_project/scripts/AddStoreVtex/BoaSaudeSuplementos.rb"
+			],
+			[
+				"rei",
+				"~/trustvox_project/scripts/AddStoreVtex/Rei das Joias.rb"
+			],
+			[
+				"reijdas",
+				"~/trustvox_project/scripts/AddStoreVtex/Rei das Joias.rb"
+			],
+			[
+				"baby",
+				"~/trustvox_project/scripts/Trustvox_RX_Baby.rb"
+			],
+			[
+				"troca",
+				"~/trustvox_project/scripts/Trocar_Opiniao_produto.rb"
+			],
+			[
+				"fix",
+				"~/trustvox_project/scripts/Fix_URLS_LojasPompeia.rb"
+			],
+			[
+				"like",
+				"lib/ciashop/link_explorer.rb"
+			],
+			[
+				"web",
+				"app/controllers/ciashop/webhooks_controller.rb"
+			],
+			[
+				"cia",
+				"lib/omniauth-ciashop/lib/omniauth/strategies/ciashop.rb"
+			],
+			[
+				"imagin",
+				"~/trustvox_project/scripts/AddStoreVtex/Imaginarium.rb"
+			],
+			[
+				"imag",
+				"~/trustvox_project/scripts/AddStoreVtex/Imaginarium.rb"
+			],
+			[
+				"every",
+				"~/trustvox_project/scripts/everyday_scripts.rb"
+			],
+			[
+				"google",
+				"~/trustvox_project/PesqiusasGoogle.html"
+			],
+			[
+				"quemd",
+				"~/trustvox_project/scripts/AddStoreVtex/QuemDisseBerenice_Eudora_TBB.rb"
+			],
+			[
+				"goog",
+				"~/trustvox_project/PesqiusasGoogle.html"
+			],
+			[
+				"rxba",
+				"~/trustvox_project/scripts/Trustvox_RX_Baby.rb"
+			],
+			[
+				"answer",
+				"app/models/answer.rb"
+			],
+			[
+				"eve",
+				"~/trustvox_project/scripts/everyday_scripts.rb"
+			],
+			[
+				"rx",
+				"~/trustvox_project/scripts/Trustvox_RX_Baby.rb"
+			],
+			[
+				"trustvoxr",
+				"~/trustvox_project/scripts/Trustvox_RX_Baby.rb"
+			],
+			[
+				"tare",
+				"~/Desktop/TarefasVoltaFerias.mdown"
+			],
+			[
+				"tarefas",
+				"~/Desktop/Tarefas para Ley"
+			],
+			[
+				"delon",
+				"~/trustvox_project/scripts/AddStoreVtex/delonghi.rb"
+			],
+			[
+				"bash",
+				"~/.bash_profile"
+			],
+			[
+				"bash_ori",
+				"~/.bash_profile"
+			],
+			[
+				"product.",
+				"app/models/product.rb"
+			],
+			[
+				"partn",
+				"app/models/partner.rb"
+			],
+			[
+				"imporvt",
+				"app/jobs/import_sales_vtex_job.rb"
+			],
+			[
+				"store.r",
+				"app/models/store.rb"
+			],
+			[
+				"sale.",
+				"app/models/sale.rb"
+			],
+			[
+				"todaysalemailsquery",
+				"app/queries/today_sale_mails_query.rb"
+			],
+			[
+				"everyda",
+				"app/services/ciashop/extract_delivery_date.rb"
+			],
+			[
+				"parseouttext",
+				"tools/parse_out_email_text.py"
+			],
+			[
+				"text",
+				"text_learning/vectorize_text.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"test",
+				"test_get_move_interface"
+			]
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
