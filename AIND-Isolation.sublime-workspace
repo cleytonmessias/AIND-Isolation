@@ -4,6 +4,66 @@
 		"selected_items":
 		[
 			[
+				"dis",
+				"distance"
+			],
+			[
+				"mini",
+				"minimum_diff"
+			],
+			[
+				"own",
+				"own_moves"
+			],
+			[
+				"curr",
+				"curr_move"
+			],
+			[
+				"best",
+				"best_move"
+			],
+			[
+				"ne",
+				"negative_infinite"
+			],
+			[
+				"sear",
+				"search_depth"
+			],
+			[
+				"alpha",
+				"alphabeta"
+			],
+			[
+				"al",
+				"alpha"
+			],
+			[
+				"posi",
+				"positive_infinite"
+			],
+			[
+				"dep",
+				"depth"
+			],
+			[
+				"max",
+				"maximizing_player"
+			],
+			[
+				"legal",
+				"legal_moves"
+			],
+			[
+				"legaL",
+				"legal_moves"
+			],
+			[
+				"lega",
+				"legal_moves"
+			],
+			[
 				"pla",
 				"player1"
 			],
@@ -63,15 +123,16 @@
 			"file": "game_agent.py",
 			"settings":
 			{
-				"buffer_size": 7929,
+				"buffer_size": 13326,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "tournament.py",
+			"file": "AIND-Isolation.sublime-project",
 			"settings":
 			{
-				"buffer_size": 7081,
+				"buffer_size": 390,
 				"line_ending": "Unix"
 			}
 		},
@@ -80,16 +141,35 @@
 			"settings":
 			{
 				"buffer_size": 8690,
-				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "[[(0, 2), (2, 4)]\n(2, 1), (4, 3)]\n(4, 0), (2, 2)]\n(5, 2), (3, 4)]\n(6, 4), (5, 3)]\n(4, 5), (3, 2)]\n(2, 6), (4, 4)]\n(1, 4), (2, 5)]\n(3, 5), (3, 3)]\n(1, 6), (5, 4)]\n(0, 4), (4, 2)]\n(1, 2), (6, 3)]\n(3, 1), (5, 5)]\n(1, 0), (3, 6)]\n(-1, -1)]",
+			"settings":
+			{
+				"buffer_size": 235,
+				"line_ending": "Unix",
+				"name": "[[(0, 2), (2, 4)]"
 			}
 		},
 		{
 			"file": "isolation/isolation.py",
 			"settings":
 			{
-				"buffer_size": 11339,
+				"buffer_size": 11442,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 10 files for \"active_player\"\n\n/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/agent_test.py:\n  189                                   width=self.width, height=self.height)\n  190          new_board.move_count = self.move_count\n  191:         new_board.__active_player__ = self.__active_player__\n  192:         new_board.__inactive_player__ = self.__inactive_player__\n  193          new_board.__last_player_move__ = copy(self.__last_player_move__)\n  194          new_board.__player_symbols__ = copy(self.__player_symbols__)\n\n/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/game_agent.py:\n  263  \n  264          if depth == 0 and maximizing_player:\n  265:             return self.score(game.active_player(),self), self.outside_position\n  266          elif depth == 0 and not maximizing_player:\n  267:             return self.score(game.inactive_player(),self), self.outside_position\n  268  \n  269          if maximizing_player:\n\n/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/README.md:\n   34  \n   35      # players take turns moving on the board, so player1 should be next to move\n   36:     assert(player1 == game.active_player)\n   37  \n   38      # get a list of the legal moves available to the active player\n\n/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/sample_players.py:\n  242  \n  243      # players take turns moving on the board, so player1 should be next to move\n  244:     assert(player1 == game.active_player)\n  245  \n  246      # get a list of the legal moves available to the active player\n\n/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/isolation/isolation.py:\n   48          self.__player_1__ = player_1\n   49          self.__player_2__ = player_2\n   50:         self.__active_player__ = player_1\n   51:         self.__inactive_player__ = player_2\n   52          self.__board_state__ = [[Board.BLANK for i in range(width)] for j in range(height)]\n   53          self.__last_player_move__ = {player_1: Board.NOT_MOVED, player_2: Board.NOT_MOVED}\n   ..\n   55  \n   56      @property\n   57:     def active_player(self):\n   58          \"\"\"\n   59          The object registered as the player holding initiative in the\n   60          current game state.\n   61          \"\"\"\n   62:         return self.__active_player__\n   63  \n   64      @property\n   65:     def inactive_player(self):\n   66          \"\"\"\n   67          The object registered as the player in waiting for the current\n   68          game state.\n   69          \"\"\"\n   70:         return self.__inactive_player__\n   71  \n   72      def get_opponent(self, player):\n   ..\n   86              The opponent of the input player object.\n   87          \"\"\"\n   88:         if player == self.__active_player__:\n   89:             return self.__inactive_player__\n   90:         elif player == self.__inactive_player__:\n   91:             return self.__active_player__\n   92          raise RuntimeError(\"`player` must be an object registered as a player in the current game.\")\n   93  \n   ..\n   96          new_board = Board(self.__player_1__, self.__player_2__, width=self.width, height=self.height)\n   97          new_board.move_count = self.move_count\n   98:         new_board.__active_player__ = self.__active_player__\n   99:         new_board.__inactive_player__ = self.__inactive_player__\n  100          new_board.__last_player_move__ = copy(self.__last_player_move__)\n  101          new_board.__player_symbols__ = copy(self.__player_symbols__)\n  ...\n  183          \"\"\"\n  184          if player is None:\n  185:             player = self.active_player\n  186          return self.__get_moves__(self.__last_player_move__[player])\n  187  \n  ...\n  201          \"\"\"\n  202          row, col = move\n  203:         self.__last_player_move__[self.active_player] = move\n  204:         self.__board_state__[row][col] = self.__player_symbols__[self.active_player]\n  205:         self.__active_player__, self.__inactive_player__ = self.__inactive_player__, self.__active_player__\n  206          self.move_count += 1\n  207  \n  208      def is_winner(self, player):\n  209          \"\"\" Test whether the specified player has won the game. \"\"\"\n  210:         return player == self.inactive_player and not self.get_legal_moves(self.active_player)\n  211  \n  212      def is_loser(self, player):\n  213          \"\"\" Test whether the specified player has lost the game. \"\"\"\n  214:         return player == self.active_player and not self.get_legal_moves(self.active_player)\n  215  \n  216      def utility(self, player):\n  ...\n  238          \"\"\"\n  239  \n  240:         if not self.get_legal_moves(self.active_player):\n  241  \n  242:             if player == self.inactive_player:\n  243                  return float(\"inf\")\n  244  \n  245:             if player == self.active_player:\n  246                  return float(\"-inf\")\n  247  \n  ...\n  330              move_start = curr_time_millis()\n  331              time_left = lambda : time_limit - (curr_time_millis() - move_start)\n  332:             curr_move = self.active_player.get_move(game_copy, legal_player_moves, time_left)\n  333              move_end = time_left()\n  334  \n  ...\n  338                  curr_move = Board.NOT_MOVED\n  339  \n  340:             if self.active_player == self.__player_1__:\n  341                  move_history.append([curr_move])\n  342              else:\n  ...\n  344  \n  345              if move_end < 0:\n  346:                 return self.__inactive_player__, move_history, \"timeout\"\n  347  \n  348              if curr_move not in legal_player_moves:\n  349:                 return self.__inactive_player__, move_history, \"illegal move\"\n  350  \n  351                 \n\n40 matches across 5 files\n\n\nSearching 12 files for \"knight\"\n\n/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/README.md:\n    8  Isolation is a deterministic, two-player game of perfect information in which the players alternate turns moving a single piece from one cell to another on a board.  Whenever either player occupies a cell, that cell becomes blocked for the remainder of the game.  The first player with no remaining legal moves loses, and the opponent is declared the winner.\n    9  \n   10: This project uses a version of Isolation where each agent is restricted to L-shaped movements (like a knight in chess) on a rectangular grid (like a chess or checkerboard).  The agents can move to any open cell on the board that is 2-rows and 1-column or 2-columns and 1-row away from their current position on the board. Movements are blocked at the edges of the board (the board does not wrap around), however, the player can \"jump\" blocked or occupied spaces (just like a knight in chess).\n   11  \n   12  Additionally, agents will have a fixed time limit each turn to search for the best move and respond.  If the time limit expires during a player's turn, that player forfeits the match, and the opponent wins.\n\n/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/isolation/isolation.py:\n    2  This file contains the `Board` class, which implements the rules for the\n    3  game Isolation as described in lecture, modified so that the players move\n    4: like knights in chess rather than queens.\n    5  \n    6  You MAY use and modify this class, however ALL function signatures must\n    .\n   21      \"\"\"\n   22      Implement a model for the game Isolation assuming each player moves like\n   23:     a knight in chess.\n   24  \n   25      Parameters\n   ..\n  251          \"\"\"\n  252          Generate the list of possible moves for an L-shaped motion (like a\n  253:         knight in chess).\n  254          \"\"\"\n  255  \n\n5 matches across 2 files\n\n\nSearching 13 files for \"score\"\n\n/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/agent_test.py:\n  123      \"\"\"\n  124  \n  125:     def score(game, player):\n  126          row, col = game.get_player_location(player)\n  127          return table[row][col]\n  128  \n  129:     return score\n  130  \n  131  \n  ...\n  140      \"\"\"\n  141  \n  142:     def score(game, player):\n  143          if timer.time_left() < 0:\n  144              raise TimeoutError(\"Timer expired during search. You must \" +\n  ...\n  148          return 0\n  149  \n  150:     return score\n  151  \n  152  \n  153  def makeBranchEval(first_branch):\n  154      \"\"\"Use a closure to create a heuristic function that evaluates to a nonzero\n  155:     score when the root of the search is the first branch explored, and\n  156      otherwise returns 0.  This heuristic is used to force alpha-beta to prune\n  157      some parts of a game tree for testing.\n  ...\n  161      \"\"\"\n  162  \n  163:     def score(game, player):\n  164          if not first_branch:\n  165              first_branch.append(game.root)\n  ...\n  168          return 0.\n  169  \n  170:     return score\n  171  \n  172  \n  ...\n  231      # @unittest.skip(\"Skip eval function test.\")  # Uncomment this line to skip test\n  232      def test_heuristic(self):\n  233:         \"\"\" Test output interface of heuristic score function interface.\"\"\"\n  234  \n  235          player1 = \"Player1\"\n  ...\n  241          game.apply_move(p2_location)\n  242  \n  243:         self.assertIsInstance(game_agent.custom_score(game, player1), float,\n  244              \"The heuristic function should return a floating point\")\n  245  \n  ...\n  272              self.assertTrue(type(v) == float,\n  273                              (\"Minimax function should return a floating \" +\n  274:                              \"point value approximating the score for the \" +\n  275                               \"branch being searched.\"))\n  276  \n  ...\n  303              self.assertTrue(type(v) == float,\n  304                              (\"Alpha Beta function should return a floating \" +\n  305:                              \"point value approximating the score for the \" +\n  306                               \"branch being searched.\"))\n  307  \n  ...\n  378          # gives eight (8) possible legal moves [(0, 2), (0, 4), (1, 1), (1, 5),\n  379          # (3, 1), (3, 5), (4, 2), (4, 4)]. The search function will pick one of\n  380:         # those moves based on the estimated score for each branch.  The value\n  381          # only changes on odd depths because even depths end on when the\n  382          # adversary has initiative.\n\n/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/game_agent.py:\n   19  \n   20  \n   21: def custom_score(game, player):\n   22      \"\"\"Calculate the heuristic value of a game state from the point of view\n   23      of the given player.\n   24  \n   25      Note: this function should be called from within a Player instance as\n   26:     `self.score()` -- you should not need to call this function directly.\n   27  \n   28      Parameters\n   ..\n   89          current state.)\n   90  \n   91:     score_fn : callable (optional)\n   92          A function to use for heuristic evaluation of game states.\n   93  \n   ..\n  105      \"\"\"\n  106  \n  107:     def __init__(self, search_depth=3, score_fn=custom_score,\n  108                   iterative=True, method='minimax', timeout=10.):\n  109          self.search_depth = search_depth\n  110          self.iterative = iterative\n  111:         self.score = score_fn\n  112          self.method = method\n  113          self.time_left = None\n  ...\n  166  \n  167          best_move = legal_moves[0]\n  168:         best_score = self.negative_infinite\n  169          \n  170  \n  ...\n  183                  depth = 1\n  184                  while True:\n  185:                     score, next_move = method_to_call(game, depth)   \n  186  \n  187:                     if (score, next_move) > (best_score, best_move):\n  188:                         best_score, best_move = score, next_move\n  189  \n  190                      depth +=1\n  191              else:\n  192:                 score, next_move = method_to_call(game, self.search_depth)   \n  193  \n  194:                 if (score, next_move) > (best_score, best_move):\n  195:                         best_score, best_move = score, next_move\n  196                  \n  197          except Timeout:\n  ...\n  224          -------\n  225          float\n  226:             The score for the current search branch\n  227  \n  228          tuple(int, int)\n  ...\n  231          Notes\n  232          -----\n  233:             (1) You MUST use the `self.score()` method for board evaluation\n  234                  to pass the project unit tests; you cannot call any other\n  235                  evaluation function directly.\n  ...\n  241          \n  242          if depth == 0:\n  243:             return self.score(game,self), self.outside_position\n  244  \n  245          if maximizing_player:\n  246:             best_score = self.negative_infinite\n  247              best_move =  self.outside_position\n  248  \n  249              for move in legal_moves:\n  250:                 score, _ = self.minimax(game.forecast_move(move), depth-1, False)\n  251:                 if score > best_score:\n  252:                     best_score, best_move = score, move\n  253              \n  254          else:\n  255:             best_score = self.positive_infinite\n  256              best_move =  self.outside_position\n  257              for move in legal_moves:\n  258:                 score, _ = self.minimax(game.forecast_move(move), depth - 1, True)\n  259  \n  260:                 if score < best_score:\n  261:                     best_score, best_move = score, move\n  262  \n  263:         return best_score, best_move\n  264          \n  265  \n  ...\n  291          -------\n  292          float\n  293:             The score for the current search branch\n  294  \n  295          tuple(int, int)\n  ...\n  298          Notes\n  299          -----\n  300:             (1) You MUST use the `self.score()` method for board evaluation\n  301                  to pass the project unit tests; you cannot call any other\n  302                  evaluation function directly.\n  ...\n  306          \n  307          if depth == 0:\n  308:             return self.score(game,self), self.outside_position\n  309  \n  310          if maximizing_player:\n  311:             best_score = alpha\n  312              best_move = self.outside_position\n  313  \n  314              for move in game.get_legal_moves():\n  315:                 score, _ = self.alphabeta(game.forecast_move(move), depth-1, alpha, beta, False)\n  316  \n  317:                 if score > best_score:\n  318:                     best_score, best_move = score, move\n  319  \n  320:                 if best_score >= beta:\n  321:                     return best_score, best_move\n  322  \n  323:                 alpha = max(alpha, best_score)\n  324          else:\n  325:             best_score = beta\n  326              best_move = self.outside_position\n  327  \n  328              for move in game.get_legal_moves():\n  329:                 score, _ = self.alphabeta(game.forecast_move(move), depth-1, alpha, beta, True)\n  330  \n  331:                 if score < best_score:\n  332:                     best_score, best_move = score, move\n  333:                 if best_score <= alpha:\n  334:                     return best_score, best_move\n  335:                 beta = min(beta, best_score)\n  336  \n  337:         return best_score, best_move\n  338  \n  339  \n\n/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/Heuristic Analysis.ipynb:\n   20      \"To give me a baseline to work, I've used:\\n\",\n   21      \"\\n\",\n   22:     \"- `custom_score` function is the same as in `sample_players -> improved_score`. \\n\",\n   23      \"- The first move was always the first available `legal_move` available (but it could be replaced after running the alphabeta or minimax algorithm)\\n\",\n   24      \"- NUM_MATCHES is 5 and TIME_LIMIT is 150\\n\",\n\n/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/README.md:\n   62  - `CustomPlayer.alphabeta()`: implement minimax search with alpha-beta pruning\n   63  - `CustomPlayer.get_move()`: implement fixed-depth and iterative deepening search\n   64: - `custom_score()`: implement your own position evaluation heuristic\n   65  \n   66  You may write or modify code within each file (as long as you maintain compatibility with the function signatures provided) and you may add other classes, functions, etc., as needed, but it is not required.  \n   ..\n   81  0. Pass the test_get_move test by extending your fixed-depth call in `CustomPlayer.get_move()` to implement Iterative Deepening.  See Also [AIMA Iterative Deepening Search](https://github.com/aimacode/aima-pseudocode/blob/master/md/Iterative-Deepening-Search.md)\n   82  \n   83: 0. Finally, pass the test_heuristic test by implementing any heuristic in `custom_score()`.  (This test only validates the return value type -- it does not check for \"correctness\" of your heuristic.)  You can see example heuristics in the `sample_players.py` file.\n   84  \n   85  \n   86  ### Tournament\n   87  \n   88: The `tournament.py` script is used to evaluate the effectiveness of your custom_score heuristic.  The script measures relative performance of your agent (called \"Student\") in a round-robin tournament against several other pre-defined agents.  The Student agent uses time-limited Iterative Deepening and the custom_score heuristic you wrote.\n   89  \n   90: The performance of time-limited iterative deepening search is hardware dependent (faster hardware is expected to search deeper than slower hardware in the same amount of time).  The script controls for these effects by also measuring the baseline performance of an agent called \"ID_Improved\" that uess Iterative Deepening and the improved_score heuristic from `sample_players.py`.  Your goal is to develop a heuristic such that Student outperforms ID_Improved.\n   91  \n   92  The tournament opponents are listed below. (See also: sample heuristics and players defined in sample_players.py)\n   93  \n   94  - Random: An agent that randomly chooses a move each turn.\n   95: - MM_Null: CustomPlayer agent using fixed-depth minimax search and the null_score heuristic\n   96: - MM_Open: CustomPlayer agent using fixed-depth minimax search and the open_move_score heuristic\n   97: - MM_Improved: CustomPlayer agent using fixed-depth minimax search and the improved_score heuristic\n   98: - AB_Null: CustomPlayer agent using fixed-depth alpha-beta search and the null_score heuristic\n   99: - AB_Open: CustomPlayer agent using fixed-depth alpha-beta search and the open_move_score heuristic\n  100: - AB_Improved: CustomPlayer agent using fixed-depth alpha-beta search and the improved_score heuristic\n  101  \n  102  \n\n/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/sample_players.py:\n    6  \n    7  \n    8: def null_score(game, player):\n    9      \"\"\"This heuristic presumes no knowledge for non-terminal states, and\n   10      returns the same uninformative value for all other states.\n   ..\n   36  \n   37  \n   38: def open_move_score(game, player):\n   39:     \"\"\"The basic evaluation function described in lecture that outputs a score\n   40      equal to the number of moves open for your computer player on the board.\n   41  \n   ..\n   65  \n   66  \n   67: def     improved_score(game, player):\n   68      \"\"\"The \"Improved\" evaluation function discussed in lecture that outputs a\n   69:     score equal to the difference in the number of moves available to the\n   70      two players.\n   71  \n   ..\n  131  \n  132  class GreedyPlayer():\n  133:     \"\"\"Player that chooses next move to maximize heuristic score. This is\n  134      equivalent to a minimax search agent with a search depth of one.\n  135      \"\"\"\n  136  \n  137:     def __init__(self, score_fn=open_move_score):\n  138:         self.score = score_fn\n  139  \n  140      def get_move(self, game, legal_moves, time_left):\n  141          \"\"\"Select the move from the available legal moves with the highest\n  142:         heuristic score.\n  143  \n  144          Parameters\n  ...\n  160          ----------\n  161          (int, int)\n  162:             The move in the legal moves list with the highest heuristic score\n  163              for the current game state; may return (-1, -1) if there are no\n  164              legal moves.\n  ...\n  167          if not legal_moves:\n  168              return (-1, -1)\n  169:         _, move = max([(self.score(game.forecast_move(m), self), m) for m in legal_moves])\n  170          return move\n  171  \n\n/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/tournament.py:\n   28  from isolation import Board\n   29  from sample_players import RandomPlayer\n   30: from sample_players import null_score\n   31: from sample_players import open_move_score\n   32: from sample_players import improved_score\n   33  from game_agent import CustomPlayer\n   34: from game_agent import custom_score\n   35  \n   36  NUM_MATCHES = 5  # number of matches against each opponent\n   ..\n  123          for p1, p2 in itertools.permutations((agent_1.player, agent_2.player)):\n  124              for _ in range(num_matches):\n  125:                 score_1, score_2 = play_match(p1, p2)\n  126:                 counts[p1] += score_1\n  127:                 counts[p2] += score_2\n  128:                 total += score_1 + score_2\n  129  \n  130          wins += counts[agent_1.player]\n  ...\n  138  def main():\n  139  \n  140:     HEURISTICS = [(\"Null\", null_score),\n  141:                   (\"Open\", open_move_score),\n  142:                   (\"Improved\", improved_score)]\n  143      AB_ARGS = {\"search_depth\": 5, \"method\": 'alphabeta', \"iterative\": False}\n  144      MM_ARGS = {\"search_depth\": 3, \"method\": 'minimax', \"iterative\": False}\n  ...\n  147      # Create a collection of CPU agents using fixed-depth minimax or alpha beta\n  148      # search, or random selection.  The agent names encode the search method\n  149:     # (MM=minimax, AB=alpha-beta) and the heuristic function (Null=null_score,\n  150:     # Open=open_move_score, Improved=improved_score). For example, MM_Open is\n  151      # an agent using minimax search with the open moves heuristic.\n  152:     mm_agents = [Agent(CustomPlayer(score_fn=h, **MM_ARGS),\n  153                         \"MM_\" + name) for name, h in HEURISTICS]\n  154:     ab_agents = [Agent(CustomPlayer(score_fn=h, **AB_ARGS),\n  155                         \"AB_\" + name) for name, h in HEURISTICS]\n  156      random_agents = [Agent(RandomPlayer(), \"Random\")]\n  ...\n  161      # relative to the performance of the ID_Improved agent to account for\n  162      # faster or slower computers.\n  163:     # test_agents = [Agent(CustomPlayer(score_fn=improved_score, **CUSTOM_ARGS), \"ID_Improved\"),\n  164:     #                Agent(CustomPlayer(score_fn=custom_score, **CUSTOM_ARGS), \"Student\")]\n  165:     test_agents = [Agent(CustomPlayer(score_fn=custom_score, **CUSTOM_ARGS), \"Student\")]\n  166  \n  167      print(DESCRIPTION)\n\n/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/.ipynb_checkpoints/Heuristic Analysis-checkpoint.ipynb:\n   20      \"To give me a baseline to work, I've used:\\n\",\n   21      \"\\n\",\n   22:     \"- `custom_score` function is the same as in `sample_players -> improved_score`. \\n\",\n   23      \"- The first move was always the first available `legal_move` available (but it could be replaced after running the alphabeta or minimax algorithm)\\n\",\n   24      \"\\n\",\n\n120 matches across 7 files\n\n\nSearching 13 files for \"self.score\"\n\n/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/game_agent.py:\n   24  \n   25      Note: this function should be called from within a Player instance as\n   26:     `self.score()` -- you should not need to call this function directly.\n   27  \n   28      Parameters\n   ..\n  109          self.search_depth = search_depth\n  110          self.iterative = iterative\n  111:         self.score = score_fn\n  112          self.method = method\n  113          self.time_left = None\n  ...\n  231          Notes\n  232          -----\n  233:             (1) You MUST use the `self.score()` method for board evaluation\n  234                  to pass the project unit tests; you cannot call any other\n  235                  evaluation function directly.\n  ...\n  241          \n  242          if depth == 0:\n  243:             return self.score(game,self), self.outside_position\n  244  \n  245          if maximizing_player:\n  ...\n  298          Notes\n  299          -----\n  300:             (1) You MUST use the `self.score()` method for board evaluation\n  301                  to pass the project unit tests; you cannot call any other\n  302                  evaluation function directly.\n  ...\n  306          \n  307          if depth == 0:\n  308:             return self.score(game,self), self.outside_position\n  309  \n  310          if maximizing_player:\n\n/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/sample_players.py:\n  136  \n  137      def __init__(self, score_fn=open_move_score):\n  138:         self.score = score_fn\n  139  \n  140      def get_move(self, game, legal_moves, time_left):\n  ...\n  167          if not legal_moves:\n  168              return (-1, -1)\n  169:         _, move = max([(self.score(game.forecast_move(m), self), m) for m in legal_moves])\n  170          return move\n  171  \n\n8 matches across 2 files\n",
+			"settings":
+			{
+				"buffer_size": 25241,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
 			}
 		},
 		{
@@ -97,7 +177,26 @@
 			"settings":
 			{
 				"buffer_size": 22201,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "tournament.py",
+			"settings":
+			{
+				"buffer_size": 7174,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "function MINIMAX-DECISION(state) returns an action\n return arg max a ∈ ACTIONS(s) MIN-VALUE(RESULT(state, a))\n\nfunction MAX-VALUE(state) returns a utility value\n if TERMINAL-TEST(state) the return UTILITY(state)\n v ← −∞\n for each a in ACTIONS(state) do\n   v ← MAX(v, MIN-VALUE(RESULT(state, a)))\n return v\n\nfunction MIN-VALUE(state) returns a utility value\n if TERMINAL-TEST(state) the return UTILITY(state)\n v ← ∞\n for each a in ACTIONS(state) do\n   v ← MIN(v, MAX-VALUE(RESULT(state, a)))\n return v",
+			"settings":
+			{
+				"buffer_size": 500,
+				"line_ending": "Unix",
+				"name": "function MINIMAX-DECISION(state) returns an action"
 			}
 		}
 	],
@@ -128,10 +227,42 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "",
+		"height": 87.0,
+		"last_filter": "priva",
 		"selected_items":
 		[
+			[
+				"priva",
+				"Gist: Create Private Gist"
+			],
+			[
+				"gd",
+				"Git: Diff"
+			],
+			[
+				"gs",
+				"Git: Status"
+			],
+			[
+				"diff",
+				"Git: Diff"
+			],
+			[
+				"private",
+				"Gist: Create Private Gist"
+			],
+			[
+				"mar",
+				"Set Syntax: Markdown"
+			],
+			[
+				"py",
+				"Set Syntax: Python"
+			],
+			[
+				"ma",
+				"Set Syntax: Markdown"
+			],
 			[
 				"",
 				"Anaconda: Set Python interpreter"
@@ -145,32 +276,16 @@
 				"Git: Diff Current File"
 			],
 			[
-				"priva",
-				"Gist: Create Private Gist"
-			],
-			[
 				"rails",
 				"Set Syntax: Ruby on Rails"
-			],
-			[
-				"private",
-				"Gist: Create Private Gist"
 			],
 			[
 				"html",
 				"Set Syntax: HTML"
 			],
 			[
-				"mar",
-				"Set Syntax: Markdown"
-			],
-			[
 				"rail",
 				"Set Syntax: Ruby on Rails"
-			],
-			[
-				"ma",
-				"Set Syntax: Markdown"
 			],
 			[
 				"pri",
@@ -207,10 +322,6 @@
 			[
 				"ja",
 				"Set Syntax: JavaScript"
-			],
-			[
-				"py",
-				"Set Syntax: Python"
 			],
 			[
 				"tml",
@@ -283,11 +394,17 @@
 	],
 	"file_history":
 	[
-		"/Users/cleytonmessias/Library/Application Support/Sublime Text 3/Packages/User/JSON.sublime-settings",
-		"/Users/cleytonmessias/Library/Application Support/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/game_agent.py",
+		"/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/README.md",
 		"/Users/cleytonmessias/Library/Application Support/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
-		"/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/isolation/isolation.py",
+		"/Users/cleytonmessias/Library/Application Support/Sublime Text 3/Packages/User/JSON.sublime-settings",
 		"/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/agent_test.py",
+		"/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/tournament.py",
+		"/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/isolation/isolation.py",
+		"/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/sample_players.py",
+		"/Users/cleytonmessias/Library/Application Support/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/Users/cleytonmessias/Library/Application Support/Sublime Text 3/Packages/Anaconda/Default (OSX).sublime-keymap",
+		"/Users/cleytonmessias/Dropbox/Education/AIND/projects/AIND-Isolation/AIND-Isolation.sublime-project",
 		"/Users/cleytonmessias/Dropbox/Education/AIND/projects/environment.yaml",
 		"/Users/cleytonmessias/trustvox_project/scripts/AddStoreVtex/Dondocas.rb",
 		"/Users/cleytonmessias/trustvox_project/scripts/AddStoreVtex/QDB_Eudora_Novo.rb",
@@ -353,6 +470,48 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"maximum_distance",
+			"self.score",
+			"score",
+			"self.score",
+			"score",
+			"custom_score",
+			"minimum_diff",
+			"get_blank_spaces",
+			", [",
+			"num_matches",
+			"NUM_MATCHES",
+			"knight",
+			"DESCRIPTION",
+			"custom_score",
+			"move",
+			"score",
+			"search",
+			"self.search_depth",
+			"positive_infinite",
+			"active_player",
+			"legal_moves",
+			"-1,-1",
+			"outside_position",
+			"legal_moves[0]",
+			"current_move",
+			"new_game",
+			"v",
+			"none",
+			"\"",
+			"show_errors_inline",
+			"location",
+			"is_loser",
+			"legal_moves[0]",
+			"is_winner",
+			"legal_moves",
+			"string",
+			"get_legal_moves",
+			"legal_moves",
+			"minimax",
+			"score",
+			"legal_moves",
+			"test",
 			"python",
 			"score",
 			"apply_move",
@@ -438,49 +597,7 @@
 			"sales_channel",
 			"preferen",
 			"TodaySaleMailsQuery",
-			"wt_sale_answer",
-			"Store.find(",
-			" ",
-			"R$",
-			"-",
-			"R$-",
-			"@",
-			"send",
-			". ",
-			", ",
-			"interval",
-			"dos produtos",
-			"http://www.cirilocabos.com.br/cabo-microfone-estereo-blindagem-espiral-2x0-14-mm-por-metro/p",
-			"Cabo-Microfone-Linha-Profissional-2x030mm%C2%B2---Cirilo-Cabos-7221/p",
-			"665",
-			"DARF IR",
-			"ISS",
-			"<span class=cliente><i class=\"fa fa-user text-regular\"></i> <span class=id>185</span> - <a href=",
-			"139",
-			"665",
-			"preferences",
-			"ImportVtexStoreSalesJob",
-			"o trustvox",
-			"import",
-			"(",
-			"655",
-			"preferen",
-			";",
-			"preferences",
-			"qbbr",
-			"388",
-			"30054",
-			"70162",
-			"30085",
-			"import",
-			"send_sa",
-			"wt_sale_answer",
-			"f_status",
-			"8056",
-			"TodaySaleMailsQuery",
-			"today",
-			"TodaySaleMailsQuery",
-			"Agora vamos interpretar esses dados para gerem informações relevantes? Fizemos um artigo apenas sobre isso"
+			"wt_sale_answer"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -498,7 +615,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -507,75 +624,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7929,
+						"buffer_size": 13326,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2889,
-								2889
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1368.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "tournament.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7081,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								6280,
-								6280
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2300.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "sample_players.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8690,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3036,
-								3036
+								3180,
+								3180
 							]
 						],
 						"settings":
@@ -591,49 +648,896 @@
 									"selector": "source.python - string - constant.numeric"
 								}
 							],
+							"history_list_is_closing": true,
 							"syntax": "Packages/Python/Python.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1531.0,
+						"translation.y": 748.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "isolation/isolation.py",
-					"semi_transient": false,
+					"buffer": 1,
+					"file": "AIND-Isolation.sublime-project",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 11339,
+						"buffer_size": 390,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5350,
-								5350
+								248,
+								248
 							]
 						],
 						"settings":
 						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sample_players.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8690,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1790,
+								1790
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"history_list_is_closing": true,
 							"syntax": "Packages/Python/Python.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2785.0,
+						"translation.y": 1132.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 235,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "[[(0, 2), (2, 4)]",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "isolation/isolation.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11442,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9656,
+								9656
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"history_list_is_closing": true,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5632.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 25241,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										283,
+										296
+									],
+									[
+										308,
+										321
+									],
+									[
+										353,
+										366
+									],
+									[
+										380,
+										393
+									],
+									[
+										739,
+										752
+									],
+									[
+										886,
+										899
+									],
+									[
+										1186,
+										1199
+									],
+									[
+										1501,
+										1514
+									],
+									[
+										1802,
+										1815
+									],
+									[
+										1853,
+										1866
+									],
+									[
+										2127,
+										2140
+									],
+									[
+										2327,
+										2340
+									],
+									[
+										2389,
+										2402
+									],
+									[
+										2584,
+										2597
+									],
+									[
+										2771,
+										2784
+									],
+									[
+										2823,
+										2836
+									],
+									[
+										2878,
+										2891
+									],
+									[
+										2928,
+										2941
+									],
+									[
+										3256,
+										3269
+									],
+									[
+										3281,
+										3294
+									],
+									[
+										3326,
+										3339
+									],
+									[
+										3353,
+										3366
+									],
+									[
+										3617,
+										3630
+									],
+									[
+										3817,
+										3830
+									],
+									[
+										3916,
+										3929
+									],
+									[
+										3953,
+										3966
+									],
+									[
+										3979,
+										3992
+									],
+									[
+										4006,
+										4019
+									],
+									[
+										4030,
+										4043
+									],
+									[
+										4244,
+										4257
+									],
+									[
+										4292,
+										4305
+									],
+									[
+										4467,
+										4480
+									],
+									[
+										4515,
+										4528
+									],
+									[
+										4657,
+										4670
+									],
+									[
+										4720,
+										4733
+									],
+									[
+										4823,
+										4836
+									],
+									[
+										5070,
+										5083
+									],
+									[
+										5277,
+										5290
+									],
+									[
+										5483,
+										5496
+									],
+									[
+										5630,
+										5643
+									],
+									[
+										6332,
+										6338
+									],
+									[
+										6705,
+										6711
+									],
+									[
+										7212,
+										7218
+									],
+									[
+										7454,
+										7460
+									],
+									[
+										7623,
+										7629
+									],
+									[
+										7850,
+										7855
+									],
+									[
+										7994,
+										7999
+									],
+									[
+										8060,
+										8065
+									],
+									[
+										8259,
+										8264
+									],
+									[
+										8420,
+										8425
+									],
+									[
+										8667,
+										8672
+									],
+									[
+										8831,
+										8836
+									],
+									[
+										9042,
+										9047
+									],
+									[
+										9227,
+										9232
+									],
+									[
+										9549,
+										9554
+									],
+									[
+										9850,
+										9855
+									],
+									[
+										10171,
+										10176
+									],
+									[
+										10447,
+										10452
+									],
+									[
+										10689,
+										10694
+									],
+									[
+										10839,
+										10844
+									],
+									[
+										11027,
+										11032
+									],
+									[
+										11043,
+										11048
+									],
+									[
+										11232,
+										11237
+									],
+									[
+										11240,
+										11245
+									],
+									[
+										11398,
+										11403
+									],
+									[
+										11554,
+										11559
+									],
+									[
+										11643,
+										11648
+									],
+									[
+										11669,
+										11674
+									],
+									[
+										11724,
+										11729
+									],
+									[
+										11743,
+										11748
+									],
+									[
+										11853,
+										11858
+									],
+									[
+										11950,
+										11955
+									],
+									[
+										11976,
+										11981
+									],
+									[
+										12031,
+										12036
+									],
+									[
+										12050,
+										12055
+									],
+									[
+										12195,
+										12200
+									],
+									[
+										12364,
+										12369
+									],
+									[
+										12618,
+										12623
+									],
+									[
+										12727,
+										12732
+									],
+									[
+										12887,
+										12892
+									],
+									[
+										12979,
+										12984
+									],
+									[
+										12992,
+										12997
+									],
+									[
+										13031,
+										13036
+									],
+									[
+										13050,
+										13055
+									],
+									[
+										13127,
+										13132
+									],
+									[
+										13279,
+										13284
+									],
+									[
+										13380,
+										13385
+									],
+									[
+										13393,
+										13398
+									],
+									[
+										13432,
+										13437
+									],
+									[
+										13451,
+										13456
+									],
+									[
+										13498,
+										13503
+									],
+									[
+										13612,
+										13617
+									],
+									[
+										13781,
+										13786
+									],
+									[
+										14035,
+										14040
+									],
+									[
+										14144,
+										14149
+									],
+									[
+										14297,
+										14302
+									],
+									[
+										14412,
+										14417
+									],
+									[
+										14425,
+										14430
+									],
+									[
+										14464,
+										14469
+									],
+									[
+										14483,
+										14488
+									],
+									[
+										14534,
+										14539
+									],
+									[
+										14588,
+										14593
+									],
+									[
+										14660,
+										14665
+									],
+									[
+										14712,
+										14717
+									],
+									[
+										14864,
+										14869
+									],
+									[
+										14978,
+										14983
+									],
+									[
+										14991,
+										14996
+									],
+									[
+										15030,
+										15035
+									],
+									[
+										15049,
+										15054
+									],
+									[
+										15092,
+										15097
+									],
+									[
+										15147,
+										15152
+									],
+									[
+										15209,
+										15214
+									],
+									[
+										15251,
+										15256
+									],
+									[
+										15477,
+										15482
+									],
+									[
+										15539,
+										15544
+									],
+									[
+										16045,
+										16050
+									],
+									[
+										16701,
+										16706
+									],
+									[
+										17017,
+										17022
+									],
+									[
+										17251,
+										17256
+									],
+									[
+										17632,
+										17637
+									],
+									[
+										18040,
+										18045
+									],
+									[
+										18144,
+										18149
+									],
+									[
+										18251,
+										18256
+									],
+									[
+										18353,
+										18358
+									],
+									[
+										18460,
+										18465
+									],
+									[
+										18570,
+										18575
+									],
+									[
+										18723,
+										18728
+									],
+									[
+										18937,
+										18942
+									],
+									[
+										19038,
+										19043
+									],
+									[
+										19182,
+										19187
+									],
+									[
+										19299,
+										19304
+									],
+									[
+										19510,
+										19515
+									],
+									[
+										19654,
+										19659
+									],
+									[
+										19673,
+										19678
+									],
+									[
+										19701,
+										19706
+									],
+									[
+										19709,
+										19714
+									],
+									[
+										19894,
+										19899
+									],
+									[
+										20072,
+										20077
+									],
+									[
+										20305,
+										20310
+									],
+									[
+										20608,
+										20613
+									],
+									[
+										20658,
+										20663
+									],
+									[
+										20707,
+										20712
+									],
+									[
+										20793,
+										20798
+									],
+									[
+										21037,
+										21042
+									],
+									[
+										21046,
+										21051
+									],
+									[
+										21112,
+										21117
+									],
+									[
+										21157,
+										21162
+									],
+									[
+										21197,
+										21202
+									],
+									[
+										21207,
+										21212
+									],
+									[
+										21341,
+										21346
+									],
+									[
+										21393,
+										21398
+									],
+									[
+										21448,
+										21453
+									],
+									[
+										21878,
+										21883
+									],
+									[
+										21913,
+										21918
+									],
+									[
+										21938,
+										21943
+									],
+									[
+										22087,
+										22092
+									],
+									[
+										22225,
+										22230
+									],
+									[
+										22556,
+										22561
+									],
+									[
+										22574,
+										22579
+									],
+									[
+										22660,
+										22665
+									],
+									[
+										22676,
+										22681
+									],
+									[
+										22756,
+										22761
+									],
+									[
+										22772,
+										22777
+									],
+									[
+										23068,
+										23073
+									],
+									[
+										23130,
+										23135
+									],
+									[
+										23575,
+										23585
+									],
+									[
+										23785,
+										23795
+									],
+									[
+										23969,
+										23979
+									],
+									[
+										24223,
+										24233
+									],
+									[
+										24402,
+										24412
+									],
+									[
+										24656,
+										24666
+									],
+									[
+										24915,
+										24925
+									],
+									[
+										25113,
+										25123
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								23960,
+								23960
+							]
+						],
+						"settings":
+						{
+							"detect_indentation": false,
+							"line_numbers": false,
+							"output_tag": 4,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 9540.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 6,
 					"file": "agent_test.py",
 					"semi_transient": false,
 					"settings":
@@ -645,8 +1549,92 @@
 						"selection":
 						[
 							[
-								11043,
-								11043
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"history_list_is_closing": true,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 8405.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "agent_test.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 22201,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"history_list_is_closing": true,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5901.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "tournament.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7174,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6664,
+								6664
 							]
 						],
 						"settings":
@@ -656,10 +1644,38 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 6142.0,
+						"translation.y": 2518.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 500,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								460,
+								460
+							]
+						],
+						"settings":
+						{
+							"auto_name": "function MINIMAX-DECISION(state) returns an action",
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
 					"type": "text"
 				}
 			]
@@ -667,7 +1683,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -698,7 +1714,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 496.0
+		"height": 179.0
 	},
 	"output.find_results":
 	{
@@ -708,7 +1724,7 @@
 	"project": "AIND-Isolation.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -717,6 +1733,34 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"tu",
+				"tournament.py"
+			],
+			[
+				"tou",
+				"tournament.py"
+			],
+			[
+				"tour",
+				"tournament.py"
+			],
+			[
+				"test",
+				"agent_test.py"
+			],
+			[
+				"gam",
+				"game_agent.py"
+			],
+			[
+				"read",
+				"README.md"
+			],
+			[
+				"sam",
+				"sample_players.py"
+			],
 			[
 				"is",
 				"isolation/isolation.py"
@@ -906,7 +1950,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 251.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

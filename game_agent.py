@@ -8,6 +8,9 @@ relative strength using tournament.py and include the results in your report.
 """
 import random
 import math
+import numpy
+from scipy.spatial import distance
+
 
 
 class Timeout(Exception):
@@ -43,9 +46,75 @@ def custom_score(game, player):
     if game.is_winner(player):
         return float("inf")
 
+    return get_as_close_as_possible_with_blank_spaces_and_weights(game, player)
+
+def function():
+    pass
+
+def get_as_far_as_possible(game, player):
+    own_moves = game.get_legal_moves(player)
+    opp_moves = game.get_legal_moves(game.get_opponent(player))
+
+    maximum_distance = -math.inf
+
+    for a in own_moves:
+        for c in opp_moves:
+            dist = distance.euclidean(a,c)
+            if dist > maximum_distance:
+                maximum_distance = dist
+
+    return float(maximum_distance)
+
+def get_as_close_as_possible(game, player):
+    own_moves = game.get_legal_moves(player)
+    opp_moves = game.get_legal_moves(game.get_opponent(player))
+
+    minimum_distance = math.inf
+
+    for a in own_moves:
+        for c in opp_moves:
+            dist = distance.euclidean(a,c)
+            if dist < minimum_distance:
+                minimum_distance = dist
+    #in order to have better scores for min distances, we should multiply by (-1)
+    return float(-minimum_distance)
+
+def get_as_close_as_possible_with_blank_spaces(game, player):
+    own_moves = game.get_legal_moves(player)
+    opp_moves = game.get_legal_moves(game.get_opponent(player))
+    blank_spaces = len(game.get_blank_spaces())
+
+
+    minimum_distance = math.inf
+
+    for a in own_moves:
+        for c in opp_moves:
+            dist = distance.euclidean(a,c)
+            if dist < minimum_distance:
+                minimum_distance = dist
+               
+    return float(-minimum_distance - blank_spaces)
+
+def get_as_close_as_possible_with_blank_spaces_and_weights(game, player):
+    own_moves = game.get_legal_moves(player)
+    opp_moves = game.get_legal_moves(game.get_opponent(player))
+    blank_spaces = len(game.get_blank_spaces())
+
+
+    minimum_distance = math.inf
+
+    for a in own_moves:
+        for c in opp_moves:
+            dist = distance.euclidean(a,c)
+            if dist < minimum_distance:
+                minimum_distance = dist
+
+    return float(-minimum_distance - (2*blank_spaces))
+
+def first_simple_heuristics(game, player):
     own_moves = len(game.get_legal_moves(player))
     opp_moves = len(game.get_legal_moves(game.get_opponent(player)))
-    return float(own_moves - opp_moves)
+    return float(own_moves - (opp_moves))
 
 
 class CustomPlayer:
@@ -134,9 +203,12 @@ class CustomPlayer:
         # Perform any required initializations, including selecting an initial
         # move from the game board (i.e., an opening book), or returning
         # immediately if there are no legal moves
-        move = self.outside_position 
+
         if not legal_moves:
-            return move
+            return self.outside_position
+
+        best_move = legal_moves[0]
+        best_score = self.negative_infinite
 
         try:
             # The search method call (alpha beta or minimax) should happen in
@@ -151,19 +223,26 @@ class CustomPlayer:
 
             if self.iterative:
                 depth = 1
-                while 1:
-                    score, move = method_to_call(game, depth)   
+                while True:
+                    score, next_move = method_to_call(game, depth)
+
+                    if (score, next_move) > (best_score, best_move):
+                        best_score, best_move = score, next_move
+
                     depth +=1
             else:
-                score, move = method_to_call(game, self.search_depth)   
+                score, next_move = method_to_call(game, self.search_depth)
+
+                if (score, next_move) > (best_score, best_move):
+                        best_score, best_move = score, next_move
                 
         except Timeout:
             # Handle any actions required at timeout, if necessary
-            pass
+            return best_move
 
         # Return the best move from the last completed search iteration
 
-        return move
+        return best_move
     
 
     def minimax(self, game, depth, maximizing_player=True):
@@ -207,7 +286,7 @@ class CustomPlayer:
 
         if maximizing_player:
             best_score = self.negative_infinite
-            best_move =  legal_moves[0]
+            best_move =  self.outside_position
 
             for move in legal_moves:
                 score, _ = self.minimax(game.forecast_move(move), depth-1, False)
@@ -216,7 +295,7 @@ class CustomPlayer:
             
         else:
             best_score = self.positive_infinite
-            best_move =  legal_moves[0]
+            best_move =  self.outside_position
             for move in legal_moves:
                 score, _ = self.minimax(game.forecast_move(move), depth - 1, True)
 
