@@ -48,9 +48,6 @@ def custom_score(game, player):
 
     return get_as_close_as_possible_with_blank_spaces_and_weights(game, player)
 
-def function():
-    pass
-
 def get_as_far_as_possible(game, player):
     own_moves = game.get_legal_moves(player)
     opp_moves = game.get_legal_moves(game.get_opponent(player))
